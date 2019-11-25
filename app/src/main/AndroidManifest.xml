@@ -18,14 +18,28 @@
             </intent-filter>
         </activity>
 
+
+
+//5新增類別,但manifests不會主動顯示,要去設receiver標籤(5)
         <receiver android:name=".myreceiverClass">
         <intent-filter>
-            <action android:name="android.intent.action.BOOT_COMPLETED" />
+            //<action android:name="android.intent.action.ACTION_AIRPLANE_MODE_CHANGED" />//取得動作的指令(飛航模式)(不明顯故註解改下行)
+            <action android:name="android.intent.action.BOOT_COMPLETED" />//(重新啟動)
+
 
         </intent-filter>
 
         </receiver>
 
+
+
+
+
     </application>
 
+
+
+
+
 </manifest>
+

@@ -6,13 +6,24 @@ import android.content.Intent;
 import android.widget.Toast;
 
 public class myreceiverClass extends BroadcastReceiver {
+//2                          extends BroadcastReceiver
+//3紅,implement methods
+//4去設定manifests
     @Override
     public void onReceive(Context context, Intent intent) {
-            //Toast.makeText(context,"已重新啟動完成",Toast.LENGTH_LONG).show();
-        //if(intent.getAction() == Intent.ACTION_AIRPLANE_MODE_CHANGED || intent.getAction() == MainActivity.mAction){
-        if (intent.getAction()== MainActivity.mAction){
+                //收到廣播
+//6(2)
+//        if(intent.getAction() == Intent.ACTION_AIRPLANE_MODE_CHANGED || intent.getAction() == MainActivity.mAction){
+//                                 //系統裡的Intent
+//            Toast.makeText(context,"收到廣播了"+intent.getAction().toString(),Toast.LENGTH_LONG).show();
+
+
+
+//12註解(16-18)改(23-25)
+        if (intent.getAction()== MainActivity.mAction){//判斷是不是標籤,是就做什麼動作
+                   //據不同Action做不同動作
            Toast.makeText(context,"我餓了",Toast.LENGTH_LONG).show();
-            //Toast.makeText(context,"收到廣播了!是"+intent.getAction().toString(),Toast.LENGTH_LONG).show();
+
         }
 
         }
